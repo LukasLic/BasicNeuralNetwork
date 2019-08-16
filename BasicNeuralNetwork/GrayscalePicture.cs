@@ -13,12 +13,24 @@ namespace Pictures
         public float[] values;
         private int iterator;
 
+        /*
+         * Loads bitmap from given filepath and saves it into values float;
+         * */
         public GrayscalePicture(string filepath)
         {
+            Bitmap bitmap;
+            try
+            {
+                bitmap = new Bitmap(filepath);
+            }
+            catch
+            {
+                Console.Beep();
+                Console.WriteLine("ERROR: File " + filepath + " not loaded.");
+                return;
+            }
+
             ResetIterator();
-
-            Bitmap bitmap = new Bitmap(filepath);
-
             int width = bitmap.Width;
             int height = bitmap.Height;
             size = bitmap.Width;
