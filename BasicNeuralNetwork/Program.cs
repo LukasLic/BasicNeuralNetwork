@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
 using System.IO;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Text;
 using Pictures;
 
 namespace BasicNeuralNetwork
@@ -15,7 +16,7 @@ namespace BasicNeuralNetwork
             List<Dataset> datasets = new List<Dataset>();
             Dataset chosenDataset;
 
-            string workingDirectory = "C:\\Users\\Workspace\\Pictures\\Dataset1";
+            string workingDirectory = ConfigurationManager.AppSettings["working directory"];
             DirectoryInfo workingDirectory_info = new DirectoryInfo(workingDirectory);
             foreach(var directory in workingDirectory_info.GetDirectories("LearningSet_*"))
             {
