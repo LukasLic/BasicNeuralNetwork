@@ -41,12 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="NeuralNetwork\Neuron.cs" />
-=======
     <Compile Include="Dataset.cs" />
     <Compile Include="GrayscalePicture.cs" />
->>>>>>> loadingPictures
+    <Compile Include="NeuralNetwork\Neuron.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
